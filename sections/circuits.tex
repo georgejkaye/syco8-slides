@@ -1,0 +1,269 @@
+\section{Categorical semantics for digital~circuits}
+
+\begin{frame}
+    \frametitle{Circuit signature}
+
+    \pause
+
+    \alert{Values} $\textbf{V}$ forming a lattice.
+
+    \pause
+
+    \alert{Gates} $g$ with associated monotonic functions $\morph{\bar{g}}{\textbf{V}^m}{\textbf{V}}$.
+
+
+    \pause
+
+    \[\textbf{V} = \tikzfig{streams/lattice}\]
+
+    \pause
+
+    \[\Sigma = (\textbf{V}, \{\morph{\ \mf{AND}}{\textbf{V}^2}{\textbf{V}},\ \morph{\mf{OR}}{\textbf{V}^2}{\textbf{V}}\ \})\]
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Combinational circuits}
+
+    \pause
+
+    Circuits are morphisms generated freely over a signature $\Sigma$.
+
+    \begin{center}
+        \tikzfig{circuits/components/bot}
+        \tikzfig{circuits/components/t}
+        \tikzfig{circuits/components/f}
+        \tikzfig{circuits/components/top}
+
+        \pause
+
+        \vspace{1em}
+
+        \tikzfig{circuits/components/and}
+        \tikzfig{circuits/components/or}
+    \end{center}
+
+    \vspace{1em}
+
+    \pause
+
+    Along with \alert{structural} generators 
+
+    \begin{center}
+        \tikzfig{circuits/components/fork}
+        \quad
+        \tikzfig{circuits/components/join}
+        \quad
+        \tikzfig{circuits/components/stub}
+    \end{center}
+
+    Composed together in sequence or parallel with \alert{identities} and \alert{symmetries}.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Combinational circuits: axioms}
+    \begin{center}
+        \vspace{2em}
+
+        \scalebox{1}{\tikzfig{circuits/axioms/fork-lhs}}
+        \quad$=$\quad
+        \scalebox{1}{\tikzfig{circuits/axioms/fork-rhs}}
+        %
+        \hspace{2em}
+        \pause
+        %
+        \scalebox{1}{\tikzfig{circuits/axioms/join-lhs}}
+        \quad$=$\quad
+        \scalebox{1}{\tikzfig{circuits/axioms/join-rhs}}
+        
+        \vspace{2em}
+        \pause
+        
+        \scalebox{1}{\tikzfig{circuits/axioms/stub-lhs}}
+        \quad$=$\quad
+        \scalebox{1}{\tikzfig{circuits/axioms/stub-rhs}}
+        %
+        \pause
+        \hspace{2em}
+        %
+        \scalebox{1}{\tikzfig{circuits/axioms/gate-lhs}}
+        \quad$=$\quad
+        \scalebox{1}{\tikzfig{circuits/axioms/gate-rhs}}
+
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Combinational circuits: extensional equivalence}
+
+    \pause
+
+    \begin{center}
+        \tikzfig{circuits/cartesian/extensional-equivalence-lhs}
+        \quad$=$\quad
+        \tikzfig{circuits/cartesian/extensional-equivalence-res}
+        \quad$=$\quad
+        \tikzfig{circuits/cartesian/extensional-equivalence-rhs}
+    \end{center}
+    
+    \pause
+
+    $f$ and $f^\prime$ are \alert{extensionally equivalent}.
+
+    \pause
+
+    \vspace{1em}
+
+    \begin{theorem}[Extensionality: Ghica and Jung, 2016]
+        For any circuit \tikzfig{circuits/components/fcirc} and values \tikzfig{circuits/components/values}, there exists values \tikzfig{circuits/cartesian/extensional-equivalence-res} such that $\tikzfig{circuits/cartesian/extensional-equivalence-lhs} = \tikzfig{circuits/cartesian/extensional-equivalence-res}$.
+    \end{theorem}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Combinational circuits}
+
+    \begin{center}
+        \scalebox{1.5}{$\text{generators} \quad + \quad \text{axioms} \quad $}
+        
+        \vspace{1em}
+        
+        \scalebox{1.5}{$+ \quad \text{extensional equivalence} \quad = \quad \ccirc[\Sigma]$}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Temporal circuits}
+
+    Combinational circuits are \alert{boring}.
+
+    \pause
+
+    \alert{Delay} is represented by a new generator 
+    
+    \vspace{2em}
+
+    \begin{center}
+        \scalebox{2}{\tikzfig{circuits/components/delay}}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Temporal circuits: axioms}
+    \begin{center}
+        \vspace{2em}
+
+        \scalebox{1}{\tikzfig{circuits/axioms/timelessness-lhs}}
+        \quad$=$\quad
+        \scalebox{1}{\tikzfig{circuits/axioms/timelessness-rhs}}
+        %
+        
+        \vspace{2em}
+        \pause
+
+        \scalebox{1}{\tikzfig{circuits/axioms/unobservable-lhs}}
+        \quad$=$\quad
+        \scalebox{1}{\tikzfig{circuits/axioms/unobservable-rhs}}
+        %
+        \hspace{3.5em}
+        \pause
+        %
+        \scalebox{1}{\tikzfig{circuits/axioms/disconnect-lhs}}
+        \quad$=$\quad
+        \scalebox{1}{\tikzfig{circuits/axioms/disconnect-rhs}}
+
+        \vspace{2em}
+        \pause
+
+        %
+        \scalebox{1}{\tikzfig{circuits/axioms/streaming-lhs}}
+        \quad$=$\quad
+        \scalebox{1}{\tikzfig{circuits/axioms/streaming-rhs}}
+
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Temporal circuits}
+    
+    \begin{center}
+        \scalebox{1.5}{$\ccirc[\Sigma] + \scalebox{1}{\tikzfig{circuits/components/delay}} + \text{axioms} \quad = \quad \tcirc[\Sigma]$}
+    \end{center}
+
+\end{frame}
+\begin{frame}
+    \frametitle{Sequential circuits}
+
+    \pause
+
+    Sequential circuits have delay and \alert{feedback}.
+    
+    \pause
+
+    We freely add a \alert{trace operator}.
+
+    \pause
+
+    \begin{center}
+        \tikzfig{strings/traced/trace-lhs}
+        \quad$\xrightarrow{\trace{1}{-}}$\quad
+        \tikzfig{strings/traced/trace-rhs}
+    \end{center}        
+
+    \pause
+
+    \vspace{1.5em}
+
+    \begin{center}
+        \scalebox{1.5}{$\tcirc[\Sigma] \quad + \quad \text{trace} \quad = \quad \scirc[\Sigma]$}
+    \end{center}
+
+\end{frame}
+\begin{frame}
+    \frametitle{Sequential circuits}
+
+    \pause
+
+    \begin{theorem}[Ghica and Jung, 2016]
+        $\scirc[\Sigma]$ is cartesian.
+    \end{theorem}
+    \pause
+    \begin{center}
+        \tikzfig{strings/cartesian/naturality-copy-lhs}
+        \pause
+        \quad$=$\quad
+        \tikzfig{strings/cartesian/naturality-copy-rhs}
+        \quad\quad
+        \pause
+        \tikzfig{strings/cartesian/naturality-discard-lhs}
+        \pause
+        \quad$=$\quad
+        \tikzfig{strings/cartesian/naturality-discard-rhs}
+    \end{center}
+    \pause
+    We can \alert{copy} and \alert{discard} data.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Sequential circuits: unfolding}
+
+    \pause
+
+    Traced cartesian categories admit the \alert{unfolding} rule.
+
+    \pause
+    \vspace{1em}
+
+    \begin{center}
+        \tikzfig{strings/dataflow/unfolding-lhs}
+        \pause
+        \quad$=$\quad
+        \tikzfig{strings/dataflow/unfolding-rhs}
+    \end{center}
+
+    \pause
+
+    Crucial part of the operational semantics!
+\end{frame}

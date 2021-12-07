@@ -1,0 +1,110 @@
+\section{Mealy machines}
+
+\begin{frame}
+    \frametitle{}
+
+    
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mealy machine}
+
+    Mealy machines are a kind of \alert{finite state machine}.
+
+    \pause
+    \begin{itemize}
+        \item \alert{State space} $S$ \pause
+        \item \alert{Input space} $M$ \pause
+        \item \alert{Output space} $O$ \pause
+        \item \alert{Transition function} $\morph{T}{S}{S^M}$ \pause
+        \item \alert{Output function} $\morph{O}{S}{N^M}$ \pause
+    \end{itemize}
+
+    Given an input $m$, a state $s_1$ produces a \alert{next state} $s_2$ and an \alert{output} $n$.
+
+    \pause
+
+    \begin{center}
+        \includestandalone{tikz/streams/exmealy}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Props of mealy machines}
+
+    By setting $M$ and $N$ to powers of $\textbf{V}$, we can define a prop of Mealy machines.
+
+    \pause
+
+    A morphism $m \to n$ is a Mealy machine with inputs $\textbf{V}^m$ and outputs $\textbf{V}^n$.
+    
+    \pause
+
+    Composition, tensor, trace fairly straightforward.
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mealy machines}
+
+    To model circuits, we set the input, output and state space to powers of $\textbf{V}$.
+
+    \pause
+
+    We interpret circuits as Mealy machines using a functor $\tomm$.
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Interpreting $\scirc[\Sigma]$}    
+
+    Source of \alert{state} in our circuits: \alert{values}...
+
+    \begin{center}
+        \tikzfig{circuits/components/v}
+        \qquad
+        \pause
+        $\xrightarrow{\tomm}$
+        \qquad
+        \raisebox{-1.25em}{\includestandalone{tikz/streams/valmealy}}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Interpreting $\scirc[\Sigma]$}    
+    ...and \alert{delay}.
+    \begin{center}
+        \tikzfig{circuits/components/delay}
+        \qquad
+        \pause
+        $\xrightarrow{\tomm}$
+        \qquad
+        \raisebox{-8em}{\includestandalone[scale=0.9]{tikz/streams/delaymealy}}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Interpreting $\scirc[\Sigma]$}
+
+    Do all the axioms of $\scirc[\Sigma]$ hold in this prop? \pause \alert{Yes.}
+
+    \pause
+
+    \begin{theorem}
+        For any $F,G \in \scirc[\Sigma]$, if $F = G$ then $\tomm[F] \equiv \tomm[G]$.
+    \end{theorem}
+
+    \pause
+
+    Can we return to a circuit morphism from an arbitrary Mealy machine? \pause \alert{Current work}.
+
+    \pause
+
+    (in circuit design this is usually a rudimentary task)
+
+\end{frame}
