@@ -104,13 +104,18 @@
 \begin{frame}
     \frametitle{Eliminating `instant' feedback}
 
+    \pause
+
     Our gates are \alert{monotonic}.
+
+    \pause
 
     By the \alert{Kleene's fixed point theorem} the circuits must have a \alert
     {least fixed point}.
-    %
+    \pause
     \[\text{lfp}(f) = \text{sup}(\{\,f^n(\bot) \,|\, n \in \nat\,\})\]
     %
+    \pause
     Since $\textbf{V}$ is finite, we will always be able to find this fixpoint!
 \end{frame}
 
@@ -158,4 +163,20 @@
     \pause
     \alert{All} circuits are productive!
 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Is this all correct?}
+
+    We have presented an axiomatisation of digital circuits.
+
+    \pause
+
+    But is it correct?
+
+    \pause
+
+    We must compare with the \alert{denotational semantics}.
+    
 \end{frame}

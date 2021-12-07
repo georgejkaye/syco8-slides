@@ -3,7 +3,7 @@
 \begin{frame}
     \frametitle{Periodic streams}
 
-    A stream is an \alert{infinite sequence} of values $v[0] :: v[1] :: v[2] :: \cdots$
+    A stream $\sigma : X^\omega$ is an \alert{infinite sequence} of values $v[0] :: v[1] :: v[2] :: \cdots$
 
     \pause
 
@@ -28,26 +28,84 @@
 
     This means there is the notion of a \alert{final coalgebra}...
 
-    \pause
-
-    \begin{center}
-        \includestandalone[scale=0.75]{tikz/streams/finalhom-simple}
-    \end{center}
-
-    \pause
-
-    And in the closed case...
-
-    \pause
-
-    \begin{center}
-        \includestandalone[scale=0.75]{tikz/streams/finalhom-simple-closed}
-    \end{center}
+    (a Mealy machine to which all Mealy machines have a unique homomorphism to)
 
 \end{frame}
 
 \begin{frame}
     \frametitle{The final Mealy coalgebra}
+
+    \pause
+
+    \begin{center}
+        \includestandalone[scale=1]{tikz/streams/finalhom-simple}
+    \end{center}
+
+    We compute the \alert{unique map} $\morph{h}{S}{(M^\omega \to N^\omega)}$ as $O :: O \circ T :: O \circ T^2 :: \cdots$
+
+    \pause
+
+    The resulting stream is the \alert{outputs over time} given an \alert{input stream}.
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{From periodic streams to (closed) circuits}
+
+    Let's consider the \alert{closed} case, so the carrier of the final coalgebra is $N^\omega$.
+
+    \pause
+
+    \[ \textbf{v}_0 :: \textbf{v}_1 :: \cdots :: \textbf{v}_{p-1} :: \textbf{v}_{p} :: \textbf{v}_{p+1} :: \cdots \textbf{v}_{p+r-1} :: \textbf{v}_{p} :: \textbf{v}_{p+1} :: \cdots\]
+
+    \pause
+
+    \begin{center}
+        \scalebox{0.65}{\tikzfig{streams/streamcirc}}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{From periodic streams to (closed) circuits}
+        \pause
+
+        \begin{center}
+            \scalebox{1.5}{$\scirc[\Sigma] + \text{only closed circuits} = \cscirc[\Sigma]$}
+
+            \pause
+
+            \vspace{1em}
+
+            \pause
+
+            \scalebox{1.5}{$\text{Periodic streams over } ({\textbf{V}^n})^\omega = \pcsprop[\textbf{V}]$}
+        \end{center}
     
+
+        \begin{theorem}
+            $\cscirc[\Sigma] \cong {\pcsprop}_{\textbf{V}}$.
+        \end{theorem}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Normalisation by evaluation}
+
+    \pause
+
+    We can translate a closed circuit morphism into a Mealy machine, then into a periodic stream and back to a circuit.
+
+    \pause
+
+    The resulting circuit will be a \alert{waveform} of values.
+    
+    \pause
+
+    This is a form of \alert{normalisation by evaluation}.
+
+    \pause
+
+    Next step: develop for \alert{open circuits}...
 
 \end{frame}

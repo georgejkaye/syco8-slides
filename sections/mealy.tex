@@ -1,13 +1,6 @@
 \section{Mealy machines}
 
 \begin{frame}
-    \frametitle{}
-
-    
-
-\end{frame}
-
-\begin{frame}
     \frametitle{Mealy machine}
 
     Mealy machines are a kind of \alert{finite state machine}.
@@ -32,6 +25,15 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{Mealy machines: bisimilarity}
+
+    Mealy machines have a notion of \alert{bisimilarity}.
+
+    If two machines are \alert{observationally equivalent}, then they are bisimilar.
+
+\end{frame}
+
+\begin{frame}
     \frametitle{Props of mealy machines}
 
     By setting $M$ and $N$ to powers of $\textbf{V}$, we can define a prop of Mealy machines.
@@ -44,25 +46,18 @@
 
     Composition, tensor, trace fairly straightforward.
 
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Mealy machines}
-
-    To model circuits, we set the input, output and state space to powers of $\textbf{V}$.
-
     \pause
 
     We interpret circuits as Mealy machines using a functor $\tomm$.
 
 \end{frame}
 
-
 \begin{frame}
     \frametitle{Interpreting $\scirc[\Sigma]$}    
 
     Source of \alert{state} in our circuits: \alert{values}...
+
+    \pause
 
     \begin{center}
         \tikzfig{circuits/components/v}
@@ -77,6 +72,8 @@
 \begin{frame}
     \frametitle{Interpreting $\scirc[\Sigma]$}    
     ...and \alert{delay}.
+
+    \pause
     \begin{center}
         \tikzfig{circuits/components/delay}
         \qquad
@@ -85,6 +82,29 @@
         \qquad
         \raisebox{-8em}{\includestandalone[scale=0.9]{tikz/streams/delaymealy}}
     \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Interpreting $\scirc[\Sigma]$}
+
+    Gates don't have any `internal state'.
+
+    \pause
+
+    \begin{center}
+        \tikzfig{circuits/components/gate}
+        \qquad
+        \pause
+        $\xrightarrow{\tomm}$
+        \qquad
+        \raisebox{-1em}{\includestandalone{tikz/streams/gatemealy}}
+    \end{center}
+
+    \pause
+
+    To interpret circuit morphisms, combine all these with composition, tensor, trace...
+
 \end{frame}
 
 
@@ -101,10 +121,25 @@
 
     \pause
 
-    Can we return to a circuit morphism from an arbitrary Mealy machine? \pause \alert{Current work}.
+    Can we return to a circuit from an arbitrary Mealy machine? \pause \alert{Current work}.
 
     \pause
 
     (in circuit design this is usually a rudimentary task)
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Finding the minimal Mealy machine}
+
+    Multiple circuits correspond to the same Mealy machine.
+
+    \pause
+
+    But not all Mealy machines (or circuits) are \alert{minimal}.
+
+    \pause
+
+    If we can find minimal Mealy machines, we can also find minimal circuits.
 
 \end{frame}
