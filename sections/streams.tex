@@ -3,7 +3,7 @@
 \begin{frame}
     \frametitle{Periodic streams}
 
-    A stream is an \alert{infinite sequence} of values $v_0 :: v_1 :: v_2 :: \cdots$
+    A stream is an \alert{infinite sequence} of values $v[0] :: v[1] :: v[2] :: \cdots$
 
     \pause
 
@@ -22,7 +22,7 @@
 \begin{frame}
     \frametitle{The final Mealy coalgebra}
 
-    Mealy machines are a \alert{coalgebra} of the functor $H(S) = (S \times N)^M$ in \textbf{Set}.
+    Mealy machines are a \alert{coalgebra} of the functor $R(S) = (S \times N)^M$ in \textbf{Set}.
 
     \pause
 
@@ -30,16 +30,24 @@
 
     \pause
 
-    The final coalgebra is \alert{stream functions} $M^\omega \to N^\omega$.
+    \begin{center}
+        \includestandalone[scale=0.75]{tikz/streams/finalhom-simple}
+    \end{center}
 
     \pause
 
-    For now we will just consider the closed case, streams $N^\omega$.
+    And in the closed case...
+
+    \pause
+
+    \begin{center}
+        \includestandalone[scale=0.75]{tikz/streams/finalhom-simple-closed}
+    \end{center}
 
 \end{frame}
 
 \begin{frame}
-    \frametitle{}
+    \frametitle{The final Mealy coalgebra}
     
 
 \end{frame}
