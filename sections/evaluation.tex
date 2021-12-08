@@ -29,7 +29,6 @@
 
     \begin{center}
         \tikzfig{circuits/productivity/step-0}
-        \pause
         \quad$=$\quad
         \tikzfig{circuits/productivity/delay-guarded}
     \end{center}
@@ -47,7 +46,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{`Instant' feedback}
+    \frametitle{Cyclic combinational circuits}
 
     But not all non-delay-guarded circuits are unproductive!
     
@@ -62,7 +61,7 @@
 
     \pause
 
-    A clever way of \alert{sharing resources}.
+    These are called \alert{cyclic combinational circuits}.
 
 \end{frame}
 
@@ -149,12 +148,12 @@
     \frametitle{Productivity, redux}
 
     \begin{theorem}
-        For any circuit $\,\tikzfig{circuits/components/fcirc-closed}\,$, there exists values $\,\tikzfig{circuits/components/values}\,$ and combinational $\,\tikzfig{circuits/components/gcirc-closed}\,$ such that 
+        For any circuit $\,\tikzfig{circuits/components/fcirc-closed}\,$, there exists values $\,\tikzfig{circuits/components/values}\,$ and circuit $\,\tikzfig{circuits/components/gcirc-closed}\,$ such that 
 
         \pause
 
         \begin{center}
-            \tikzfig{circuits/components/fcirc} 
+            \tikzfig{circuits/components/fcirc-closed} 
             \quad$=$\quad
             \tikzfig{circuits/productivity/productive} 
         \end{center}

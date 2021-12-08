@@ -9,16 +9,15 @@
 
     \pause
 
-    \alert{Gates} $g$ with associated monotonic functions $\morph{\bar{g}}{\textbf{V}^m}{\textbf{V}}$.
-
-
-    \pause
-
     \[\textbf{V} = \tikzfig{streams/lattice}\]
 
     \pause
 
-    \[\Sigma = (\textbf{V}, \{\morph{\ \mf{AND}}{\textbf{V}^2}{\textbf{V}},\ \morph{\mf{OR}}{\textbf{V}^2}{\textbf{V}}\ \})\]
+    \alert{Gate symbols} $g$ with associated monotonic functions $\morph{\bar{g}}{\textbf{V}^m}{\textbf{V}}$.
+
+    \pause
+
+    \[\{\morph{\ \mf{AND}}{\textbf{V}^2}{\textbf{V}},\ \morph{\mf{OR}}{\textbf{V}^2}{\textbf{V}}\ \}\]
 
 \end{frame}
 
@@ -27,9 +26,11 @@
 
     \pause
 
-    Circuits are morphisms generated freely over a signature $\Sigma$.
+    Circuits are morphisms in the prop generated freely over a signature $\Sigma$.
 
     \pause
+
+    e.g:
 
     \begin{center}
         \tikzfig{circuits/components/bot}
@@ -59,12 +60,16 @@
         \tikzfig{circuits/components/stub}
     \end{center}
 
+    \pause
+
     Composed together in sequence or parallel with identities and symmetries.
 
 \end{frame}
 
 \begin{frame}
     \frametitle{Combinational circuits: axioms}
+
+    \pause
     \begin{center}
         \vspace{2em}
 

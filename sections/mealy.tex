@@ -9,7 +9,7 @@
     \begin{itemize}
         \item \alert{State space} $S$ \pause
         \item \alert{Input space} $M$ \pause
-        \item \alert{Output space} $O$ \pause
+        \item \alert{Output space} $N$ \pause
         \item \alert{Transition function} $\morph{T}{S}{S^M}$ \pause
         \item \alert{Output function} $\morph{O}{S}{N^M}$ \pause
     \end{itemize}
@@ -29,6 +29,8 @@
 
     Mealy machines have a notion of \alert{bisimilarity}.
 
+    \pause
+
     If two machines are \alert{observationally equivalent}, then they are bisimilar.
 
 \end{frame}
@@ -44,7 +46,7 @@
     
     \pause
 
-    Composition, tensor, trace fairly straightforward.
+    We can define composition, tensor, trace...
 
     \pause
 
@@ -116,7 +118,7 @@
     \pause
 
     \begin{theorem}
-        For any $F,G \in \scirc[\Sigma]$, if $F = G$ then $\tomm[F] \equiv \tomm[G]$.
+        For any $F,G \in \scirc[\Sigma]$, if $F = G$ then $\tomm[F]$ and $\tomm[G]$ are bisimilar.
     \end{theorem}
 
     \pause
