@@ -1,0 +1,12 @@
+- final mealy machine homomorphism wording is weird
+   - terminal mealy machine?
+   
+- Mealy machines are coalgebras
+
+- prop ccirc
+
+- 'water down' kleene
+
+- what are the new contributions?
+
+- 
