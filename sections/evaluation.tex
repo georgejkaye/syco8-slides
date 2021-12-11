@@ -105,17 +105,14 @@
 
     \pause
 
-    Our gates are \alert{monotonic}.
+    Our gates are \alert{monotonic}, so they must have a \alert{least fixed point}...
+    
+    \[f^i(\bot) = f^{i+1}(\bot)\]
 
     \pause
 
-    By the \alert{Kleene's fixed point theorem} the circuits must have a \alert
-    {least fixed point}.
-    \pause
-    \[\text{lfp}(f) = \text{sup}(\{\,f^n(\bot) \,|\, n \in \nat\,\})\]
-    %
-    \pause
-    Since $\textbf{V}$ is finite, we will always be able to find this fixpoint!
+    Because the value set $\textbf{V}$ is finite, we can always find this fixpoint!    
+    
 \end{frame}
 
 \begin{frame}
@@ -168,7 +165,7 @@
 \begin{frame}
     \frametitle{Is this all correct?}
 
-    We have presented an axiomatisation of digital circuits.
+    We have \alert{extended} the existing axiomatisation of digital circuits to work with \alert{instant feedback}.
 
     \pause
 
@@ -178,4 +175,19 @@
 
     We must compare with the \alert{denotational semantics}.
     
+\end{frame}
+
+\begin{frame}
+    \frametitle{The denotational semantics of circuits}
+
+    Circuits $m \to n$ $\Rightarrow$ functions $(\textbf{V}^m)^\omega \to (\textbf{V}^n)^\omega$. 
+
+    \pause
+
+    How do we translate a circuit into a stream?
+
+    \pause
+
+    We will take a route via \alert{Mealy machines}.
+
 \end{frame}

@@ -7,6 +7,6 @@
 
 - 'water down' kleene
 
-- what are the new contributions?
+- what are the new contributions? 
 
 - 

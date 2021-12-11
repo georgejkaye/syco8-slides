@@ -1,40 +1,15 @@
 \section{Streams}
 
 \begin{frame}
-    \frametitle{(Periodic) streams}
-
-    \pause
-
-    A stream $\sigma : X^\omega$ is an \alert{infinite sequence} of values $v[0] :: v[1] :: v[2] :: \cdots$
-
-    \pause
-
-    A stream $\sigma$ is \alert{periodic} if it has a finite \alert{prefix} and an infinitely reoccurring \alert{period}.
-    %
-    \[ \textbf{v}_0 :: \textbf{v}_1 :: \cdots :: \textbf{v}_{p-1} :: \textbf{v}_{p} :: \textbf{v}_{p+1} :: \cdots \textbf{v}_{p+r-1} :: \textbf{v}_{p} :: \textbf{v}_{p+1} :: \cdots\]
-    
-    \pause
-
-    We propose that the outputs of circuits over time form \alert{periodic streams}.
-
-    \pause
-
-    Streams are the \alert{final Mealy coalgebra}.
-
-\end{frame}
-
-\begin{frame}
     \frametitle{The final Mealy coalgebra}
 
     \pause
 
-    Mealy machines are a \alert{coalgebra} of the functor $R(S) = (S \times N)^M$ in \textbf{Set}.
+    A Mealy machine is a \alert{coalgebra} of the functor $R(S) = (S \times N)^M$ in \textbf{Set}.
 
     \pause
 
     This means there is the notion of a \alert{final coalgebra}...
-
-    (a Mealy machine to which all Mealy machines have a unique homomorphism to)
 
 \end{frame}
 
@@ -52,14 +27,34 @@
     \pause
 
     The resulting stream is the \alert{outputs over time} given an \alert{input stream}.
+\end{frame}
 
+\begin{frame}
+    \frametitle{Periodic streams}
+
+    For now, we focus on \alert{closed} circuits.
+
+    \pause
+
+    Our circuits are \alert{finite} in nature.
+
+    \pause
+
+    They may produce an infinite sequence of outputs, but it will be \alert{periodic}.
+
+    \pause
+
+    A stream $\sigma$ is \alert{periodic} if it has a finite \alert{prefix} and an infinitely reoccurring \alert{period}.
+    %
+    \[ \textbf{v}_0 :: \textbf{v}_1 :: \cdots :: \textbf{v}_{p-1} :: \textbf{v}_{p} :: \textbf{v}_{p+1} :: \cdots \textbf{v}_{p+r-1} :: \textbf{v}_{p} :: \textbf{v}_{p+1} :: \cdots\]
+    
 
 \end{frame}
 
 \begin{frame}
-    \frametitle{From periodic streams to (closed) circuits}
+    \frametitle{From periodic streams to closed circuits}
 
-    Let's consider the \alert{closed} case, so the carrier of the final coalgebra is $N^\omega$.
+    In the \alert{closed} case, the carrier of the final coalgebra is $N^\omega$.
 
     \pause
 
@@ -74,7 +69,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{From periodic streams to (closed) circuits}
+    \frametitle{From periodic streams to closed circuits}
         \pause
 
         \begin{center}

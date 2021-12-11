@@ -6,15 +6,24 @@
     Mealy machines are a kind of \alert{finite state machine}.
 
     \pause
+
+    Sets of \alert{states} $S$, \pause \alert{inputs} $M$, \pause \alert{outputs} $N$
+
+    \pause
+
+    Given input $m \in M$ and state $s_1 \in S$ we have:
+    
+    \pause
+
     \begin{itemize}
-        \item \alert{State space} $S$ \pause
-        \item \alert{Input space} $M$ \pause
-        \item \alert{Output space} $N$ \pause
-        \item \alert{Transition function} $\morph{T}{S}{S^M}$ \pause
-        \item \alert{Output function} $\morph{O}{S}{N^M}$ \pause
+        \item \alert{next state} $T(s_1)(m) = s_2 \in S$
+        \pause
+        \item \alert{output} $O(s_1)(m) = n \in N$.
     \end{itemize}
 
-    Given an input $m$, a state $s_1$ produces a \alert{next state} $s_2$ and an \alert{output} $n$.
+    \pause
+
+    A Mealy machine also has a \alert{start state}.
 
     \pause
 
@@ -105,7 +114,7 @@
 
     \pause
 
-    To interpret circuit morphisms, combine all these with composition, tensor, trace...
+    To interpret circuit morphisms, combine with composition, tensor, trace...
 
 \end{frame}
 
@@ -123,25 +132,10 @@
 
     \pause
 
-    Can we return to a circuit from an arbitrary Mealy machine? \pause \alert{Current work}.
+    Can we return to a circuit from an arbitrary Mealy machine? 
 
     \pause
 
-    (in circuit design this is usually a rudimentary task)
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Finding the minimal Mealy machine}
-
-    Multiple circuits correspond to the same Mealy machine.
-
-    \pause
-
-    But not all Mealy machines (or circuits) are \alert{minimal}.
-
-    \pause
-
-    If we can find minimal Mealy machines, we can also find minimal circuits.
+    Should be possible, rudimentary task in circuit design.
 
 \end{frame}
