@@ -60,14 +60,12 @@
         \tikzfig{circuits/components/stub}
     \end{center}
 
-    \pause
-
-    Composed together in sequence or parallel with identities and symmetries.
-
 \end{frame}
 
 \begin{frame}
     \frametitle{Combinational circuits: axioms}
+
+    Behaviour defined using \alert{axioms}.
 
     \pause
     \begin{center}
@@ -104,6 +102,8 @@
 \begin{frame}
     \frametitle{Combinational circuits: extensional equivalence}
 
+    We also consider \alert{input-output behaviour}.
+
     \pause
 
     \begin{center}
@@ -118,13 +118,6 @@
 
     $F$ and $G$ are \alert{extensionally equivalent}.
 
-    \pause
-
-    \vspace{1em}
-
-    \begin{theorem}[Extensionality: Ghica and Jung, 2016]
-        For any circuit \tikzfig{circuits/components/fcirc} and values \tikzfig{circuits/components/values}, there exists values \tikzfig{circuits/cartesian/extensional-equivalence-res} such that $\tikzfig{circuits/cartesian/extensional-equivalence-lhs} = \tikzfig{circuits/cartesian/extensional-equivalence-res}$.
-    \end{theorem}
 \end{frame}
 
 \begin{frame}
@@ -236,6 +229,8 @@
         $\scirc[\Sigma]$ is cartesian.
     \end{theorem}
     \pause
+    We can \alert{copy} and \alert{discard} data.
+    \pause
     \begin{center}
         \tikzfig{strings/cartesian/naturality-copy-lhs}
         \pause
@@ -248,8 +243,6 @@
         \quad$=$\quad
         \tikzfig{strings/cartesian/naturality-discard-rhs}
     \end{center}
-    \pause
-    We can \alert{copy} and \alert{discard} data.
 
 \end{frame}
 
