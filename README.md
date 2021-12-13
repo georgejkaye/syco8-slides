@@ -23,5 +23,6 @@ Every time you push with a head commit that starts with `[build]`, the latex wil
 
 ## Latest release
 
-* [PDF file](https://github.com/georgejkaye/syco8-slides/releases/latest/download/syco8-slides.pdf)
+* [PDF file (presentation)](https://github.com/georgejkaye/syco8-slides/releases/latest/download/syco8-slides.pdf)
+* [PDF file (handout)](https://github.com/georgejkaye/syco8-slides/releases/latest/download/syco8-slides-handout.pdf)
 * [Project package](https://github.com/georgejkaye/syco8-slides/releases/latest/download/syco8-slides.zip)
