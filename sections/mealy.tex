@@ -51,7 +51,7 @@
 
     \pause
 
-    A morphism \(m \to n\) is a Mealy machine with inputs \(\valtuple{m}\) and outputs \(\valtuple{n}\).
+    A morphism \(m \to n\) is a Mealy machine with inputs \(\valuetuple{m}\) and outputs \(\valuetuple{n}\).
     
     \pause
 
@@ -59,7 +59,7 @@
 
     \pause
 
-    We interpret circuits as Mealy machines using a functor \(\tomm\).
+    We interpret circuits as Mealy machines using a functor $\circuittomealy{\interpretation}$.
 
 \end{frame}
 
@@ -74,7 +74,7 @@
         \tikzfig{circuits/components/v}
         \qquad
         \pause
-        \(\xrightarrow{\tomm}\)
+        $\xrightarrow{\circuittomealy{\interpretation}}$
         \qquad
         \raisebox{-1.25em}{\includestandalone{tikz/streams/valmealy}}
     \end{center}
@@ -89,7 +89,7 @@
         \tikzfig{circuits/components/delay}
         \qquad
         \pause
-        \(\xrightarrow{\tomm}\)
+        $\xrightarrow{\circuittomealy{\interpretation}}$
         \qquad
         \raisebox{-8em}{\includestandalone[scale=0.9]{tikz/streams/delaymealy}}
     \end{center}
@@ -107,7 +107,7 @@
         \tikzfig{circuits/components/gate}
         \qquad
         \pause
-        \(\xrightarrow{\tomm}\)
+        $\xrightarrow{\circuittomealy{\interpretation}}$
         \qquad
         \raisebox{-1em}{\includestandalone{tikz/streams/gatemealy}}
     \end{center}
@@ -127,7 +127,7 @@
     \pause
 
     \begin{theorem}
-        For any \(F,G \in \scirc[\Sigma]\), if \(F = G\) then \(\tomm[F]\) and \(\tomm[G]\) are bisimilar.
+        For any $F,G \in \scirc[\Sigma]$, if $F = G$ then $\circuittomealy{\interpretation}[F]$ and $\circuittomealy{\interpretation}[G]$ are bisimilar.
     \end{theorem}
 
     \pause
