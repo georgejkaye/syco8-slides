@@ -7,18 +7,18 @@
 
     \pause
 
-    Sets of \alert{states} $S$, \pause \alert{inputs} $M$, \pause \alert{outputs} $N$
+    Sets of \alert{states} \(S\), \pause \alert{inputs} \(M\), \pause \alert{outputs} \(N\)
 
     \pause
 
-    Given input $m \in M$ and state $s_1 \in S$ we have:
+    Given input \(m \in M\) and state \(s_1 \in S\) we have:
     
     \pause
 
     \begin{itemize}
-        \item \alert{next state} $T(s_1)(m) = s_2 \in S$
+        \item \alert{next state} \(T(s_1)(m) = s_2 \in S\)
         \pause
-        \item \alert{output} $O(s_1)(m) = n \in N$.
+        \item \alert{output} \(O(s_1)(m) = n \in N\).
     \end{itemize}
 
     \pause
@@ -47,11 +47,11 @@
 \begin{frame}
     \frametitle{Props of mealy machines}
 
-    By setting $M$ and $N$ to powers of $\textbf{V}$, we can define a prop of Mealy machines.
+    By setting \(M\) and \(N\) to powers of \(\textbf{V}\), we can define a prop of Mealy machines.
 
     \pause
 
-    A morphism $m \to n$ is a Mealy machine with inputs $\textbf{V}^m$ and outputs $\textbf{V}^n$.
+    A morphism \(m \to n\) is a Mealy machine with inputs \(\textbf{V}^m\) and outputs \(\textbf{V}^n\).
     
     \pause
 
@@ -59,12 +59,12 @@
 
     \pause
 
-    We interpret circuits as Mealy machines using a functor $\tomm$.
+    We interpret circuits as Mealy machines using a functor \(\tomm\).
 
 \end{frame}
 
 \begin{frame}
-    \frametitle{Interpreting $\scirc[\Sigma]$}    
+    \frametitle{Interpreting \(\scirc[\Sigma]\)}    
 
     Source of \alert{state} in our circuits: \alert{values}...
 
@@ -74,14 +74,14 @@
         \tikzfig{circuits/components/v}
         \qquad
         \pause
-        $\xrightarrow{\tomm}$
+        \(\xrightarrow{\tomm}\)
         \qquad
         \raisebox{-1.25em}{\includestandalone{tikz/streams/valmealy}}
     \end{center}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Interpreting $\scirc[\Sigma]$}    
+    \frametitle{Interpreting \(\scirc[\Sigma]\)}    
     ...and \alert{delay}.
 
     \pause
@@ -89,7 +89,7 @@
         \tikzfig{circuits/components/delay}
         \qquad
         \pause
-        $\xrightarrow{\tomm}$
+        \(\xrightarrow{\tomm}\)
         \qquad
         \raisebox{-8em}{\includestandalone[scale=0.9]{tikz/streams/delaymealy}}
     \end{center}
@@ -97,7 +97,7 @@
 
 
 \begin{frame}
-    \frametitle{Interpreting $\scirc[\Sigma]$}
+    \frametitle{Interpreting \(\scirc[\Sigma]\)}
 
     Gates don't have any `internal state'.
 
@@ -107,7 +107,7 @@
         \tikzfig{circuits/components/gate}
         \qquad
         \pause
-        $\xrightarrow{\tomm}$
+        \(\xrightarrow{\tomm}\)
         \qquad
         \raisebox{-1em}{\includestandalone{tikz/streams/gatemealy}}
     \end{center}
@@ -120,14 +120,14 @@
 
 
 \begin{frame}
-    \frametitle{Interpreting $\scirc[\Sigma]$}
+    \frametitle{Interpreting \(\scirc[\Sigma]\)}
 
-    Do all the axioms of $\scirc[\Sigma]$ hold in this prop? \pause \alert{Yes.}
+    Do all the axioms of \(\scirc[\Sigma]\) hold in this prop? \pause \alert{Yes.}
 
     \pause
 
     \begin{theorem}
-        For any $F,G \in \scirc[\Sigma]$, if $F = G$ then $\tomm[F]$ and $\tomm[G]$ are bisimilar.
+        For any \(F,G \in \scirc[\Sigma]\), if \(F = G\) then \(\tomm[F]\) and \(\tomm[G]\) are bisimilar.
     \end{theorem}
 
     \pause

@@ -9,7 +9,7 @@
 
     \begin{center}
         \tikzfig{circuits/productivity/step-0}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{0.5}{\tikzfig{streams/streamcirc-simple}}
     \end{center}
 
@@ -29,11 +29,11 @@
 
     \begin{center}
         \tikzfig{circuits/productivity/step-0}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/productivity/delay-guarded}
     \end{center}
 
-    where $\hat{F}$ is combinational.
+    where \(\hat{F}\) is combinational.
 
     \pause
 
@@ -55,7 +55,7 @@
     \begin{center}
         \tikzfig{circuits/examples/cyclic-combinational}
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/examples/cyclic-combinational-reduced}
     \end{center}
 
@@ -74,7 +74,7 @@
         \pause
         \tikzfig{circuits/productivity/trand}
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/productivity/trand-unfold}
 
     \end{center}
@@ -111,7 +111,7 @@
 
     \pause
 
-    Because the value set $\textbf{V}$ is finite, we can always find this fixpoint!    
+    Because the value set \(\textbf{V}\) is finite, we can always find this fixpoint!    
     
 \end{frame}
 
@@ -122,19 +122,19 @@
     \begin{center}
         \tikzfig{circuits/productivity/trand} 
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/productivity/trand-instfb}
 
         \vspace{1em}
 
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/productivity/trand-instfb-reduced-1}
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/productivity/trand-instfb-reduced-2}
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/productivity/trand-instfb-reduced-3}
     \end{center}
 
@@ -145,13 +145,13 @@
     \frametitle{Productivity, redux}
 
     \begin{theorem}
-        For any circuit $\,\tikzfig{circuits/components/fcirc-closed}\,$, there exists values $\,\tikzfig{circuits/components/values}\,$ and circuit $\,\tikzfig{circuits/components/gcirc-closed}\,$ such that 
+        For any circuit \(\,\tikzfig{circuits/components/fcirc-closed}\,\), there exists values \(\,\tikzfig{circuits/components/values}\,\) and circuit \(\,\tikzfig{circuits/components/gcirc-closed}\,\) such that 
 
         \pause
 
         \begin{center}
             \tikzfig{circuits/components/fcirc-closed} 
-            \quad$=$\quad
+            \quad\(=\)\quad
             \tikzfig{circuits/productivity/productive} 
         \end{center}
     \end{theorem}
@@ -180,7 +180,7 @@
 \begin{frame}
     \frametitle{The denotational semantics of circuits}
 
-    Circuits $m \to n$ $\Rightarrow$ functions $(\textbf{V}^m)^\omega \to (\textbf{V}^n)^\omega$. 
+    Circuits \(m \to n\) \(\Rightarrow\) functions \((\textbf{V}^m)^\omega \to (\textbf{V}^n)^\omega\). 
 
     \pause
 

@@ -5,7 +5,7 @@
 
     \pause
 
-    \alert{Values} $\textbf{V}$ forming a lattice.
+    \alert{Values} \(\textbf{V}\) forming a lattice.
 
     \pause
 
@@ -13,7 +13,7 @@
 
     \pause
 
-    \alert{Gate symbols} $g$ with associated monotonic functions $\morph{\bar{g}}{\textbf{V}^m}{\textbf{V}}$.
+    \alert{Gate symbols} \(g\) with associated monotonic functions \(\morph{\bar{g}}{\textbf{V}^m}{\textbf{V}}\).
 
     \pause
 
@@ -26,7 +26,7 @@
 
     \pause
 
-    Circuits are \alert{morphisms} in the prop generated freely over a signature $\Sigma$.
+    Circuits are \alert{morphisms} in the prop generated freely over a signature \(\Sigma\).
 
     \pause
 
@@ -72,28 +72,28 @@
         \vspace{2em}
 
         \scalebox{1}{\tikzfig{circuits/axioms/fork-lhs}}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{1}{\tikzfig{circuits/axioms/fork-rhs}}
         %
         \hspace{2em}
         \pause
         %
         \scalebox{1}{\tikzfig{circuits/axioms/join-lhs}}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{1}{\tikzfig{circuits/axioms/join-rhs}}
         
         \vspace{2em}
         \pause
         
         \scalebox{1}{\tikzfig{circuits/axioms/stub-lhs}}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{1}{\tikzfig{circuits/axioms/stub-rhs}}
         %
         \pause
         \hspace{2em}
         %
         \scalebox{1}{\tikzfig{circuits/axioms/gate-lhs}}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{1}{\tikzfig{circuits/axioms/gate-rhs}}
 
     \end{center}
@@ -108,15 +108,15 @@
 
     \begin{center}
         \tikzfig{circuits/cartesian/extensional-equivalence-lhs}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/cartesian/extensional-equivalence-res}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{circuits/cartesian/extensional-equivalence-rhs}
     \end{center}
     
     \pause
 
-    $F$ and $G$ are \alert{extensionally equivalent}.
+    \(F\) and \(G\) are \alert{extensionally equivalent}.
 
 \end{frame}
 
@@ -124,11 +124,11 @@
     \frametitle{The prop of combinational circuits}
 
     \begin{center}
-        \scalebox{1.5}{$\text{generators} \quad + \quad \text{axioms} \quad $}
+        \scalebox{1.5}{\(\text{generators} \quad + \quad \text{axioms} \quad \)}
         
         \vspace{1em}
         
-        \scalebox{1.5}{$+ \quad \text{quotient by extensional equivalence} \quad = \quad \ccirc[\Sigma]$}
+        \scalebox{1.5}{\(+ \quad \text{quotient by extensional equivalence} \quad = \quad \ccirc[\Sigma]\)}
     \end{center}
 \end{frame}
 
@@ -155,7 +155,7 @@
         \vspace{2em}
 
         \scalebox{1}{\tikzfig{circuits/axioms/timelessness-lhs}}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{1}{\tikzfig{circuits/axioms/timelessness-rhs}}
         %
         
@@ -163,14 +163,14 @@
         \pause
 
         \scalebox{1}{\tikzfig{circuits/axioms/unobservable-lhs}}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{1}{\tikzfig{circuits/axioms/unobservable-rhs}}
         %
         \hspace{3.5em}
         \pause
         %
         \scalebox{1}{\tikzfig{circuits/axioms/disconnect-lhs}}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{1}{\tikzfig{circuits/axioms/disconnect-rhs}}
 
         \vspace{2em}
@@ -178,7 +178,7 @@
 
         %
         \scalebox{1}{\tikzfig{circuits/axioms/streaming-lhs}}
-        \quad$=$\quad
+        \quad\(=\)\quad
         \scalebox{1}{\tikzfig{circuits/axioms/streaming-rhs}}
 
     \end{center}
@@ -188,7 +188,7 @@
     \frametitle{The prop of temporal circuits}
     
     \begin{center}
-        \scalebox{1.5}{$\ccirc[\Sigma] + \scalebox{1}{\tikzfig{circuits/components/delay}} + \text{axioms} \quad = \quad \tcirc[\Sigma]$}
+        \scalebox{1.5}{\(\ccirc[\Sigma] + \scalebox{1}{\tikzfig{circuits/components/delay}} + \text{axioms} \quad = \quad \tcirc[\Sigma]\)}
     \end{center}
 
 \end{frame}
@@ -207,7 +207,7 @@
 
     \begin{center}
         \tikzfig{strings/traced/trace-lhs}
-        \quad$\xrightarrow{\trace{1}{-}}$\quad
+        \quad\(\xrightarrow{\trace{1}{-}}\)\quad
         \tikzfig{strings/traced/trace-rhs}
     \end{center}        
 
@@ -216,7 +216,7 @@
     \vspace{1.5em}
 
     \begin{center}
-        \scalebox{1.5}{$\tcirc[\Sigma] \quad + \quad \text{trace} \quad = \quad \scirc[\Sigma]$}
+        \scalebox{1.5}{\(\tcirc[\Sigma] \quad + \quad \text{trace} \quad = \quad \scirc[\Sigma]\)}
     \end{center}
 
 \end{frame}
@@ -226,7 +226,7 @@
     \pause
 
     \begin{theorem}[Ghica and Jung, 2016]
-        $\scirc[\Sigma]$ is cartesian.
+        \(\scirc[\Sigma]\) is cartesian.
     \end{theorem}
     \pause
     We can \alert{copy} and \alert{discard} data.
@@ -234,13 +234,13 @@
     \begin{center}
         \tikzfig{strings/cartesian/naturality-copy-lhs}
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{strings/cartesian/naturality-copy-rhs}
         \quad\quad
         \pause
         \tikzfig{strings/cartesian/naturality-discard-lhs}
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{strings/cartesian/naturality-discard-rhs}
     \end{center}
 
@@ -259,7 +259,7 @@
     \begin{center}
         \tikzfig{strings/dataflow/unfolding-lhs}
         \pause
-        \quad$=$\quad
+        \quad\(=\)\quad
         \tikzfig{strings/dataflow/unfolding-rhs}
     \end{center}
 
